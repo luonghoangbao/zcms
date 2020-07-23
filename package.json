@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "debug:dev": "env-cmd -f environments/.env.development cross-env NODE_OPTIONS='--inspect=0.0.0.0:9229' next dev",
-    "debug:staging": "env-cmd -f environments/.env.staging cross-env NODE_OPTIONS='--inspect=0.0.0.0:9229' next dev",
-    "debug:prod": "env-cmd -f environments/.env.production cross-env NODE_OPTIONS='--inspect=0.0.0.0:9229' next dev",
+    "debug:dev": "env-cmd -f environments/.env.development nodemon",
+    "debug:staging": "env-cmd -f environments/.env.staging nodemon",
+    "debug:prod": "env-cmd -f environments/.env.production nodemon",
     "build:dev": "env-cmd -f environments/.env.development next build",
     "build:staging": "env-cmd -f environments/.env.staging next build",
     "build:prod": "env-cmd -f environments/.env.production next build",
@@ -14,7 +14,9 @@
     "start:prod": "yarn run build:prod && next start"
   },
   "dependencies": {
+    "bootstrap": "^4.5.0",
     "next": "9.4.4",
+    "next-seo": "^4.7.3",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "sass": "^1.26.10"
@@ -24,6 +26,9 @@
     "@types/react": "^16.9.43",
     "cross-env": "^7.0.2",
     "env-cmd": "^10.1.0",
+    "next-compose-plugins": "^2.2.0",
+    "nodemon": "^2.0.4",
+    "ts-node": "^8.10.2",
     "typescript": "3.8.3"
   }
 }
