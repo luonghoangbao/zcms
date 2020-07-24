@@ -1,5 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
+const withImages = require('next-images');
 const withPlugins = require('next-compose-plugins');
 const { PHASE_DEVELOPMENT_SERVER, PHASE_PRODUCTION_BUILD } = require('next/constants');
 
@@ -24,3 +25,4 @@ module.exports = (phase, ...rest) => {
     const shouldAddBuildConfig = phase === PHASE_DEVELOPMENT_SERVER || phase === PHASE_PRODUCTION_BUILD;
     return shouldAddBuildConfig ? getBuildConfig(phase) : {}
 }
+module.exports = withImages({});

@@ -14,7 +14,6 @@ export default class Layout extends React.Component {
                 </Head>
                 <body>
                     <Header/>
-                    This is public layout
                     <Main />
                     <Footer/>
                     <NextScript />
