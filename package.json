@@ -9,9 +9,9 @@
     "build:dev": "env-cmd -f environments/.env.development next build",
     "build:staging": "env-cmd -f environments/.env.staging next build",
     "build:prod": "env-cmd -f environments/.env.production next build",
-    "start:dev": "yarn run build:dev && next start",
-    "start:staging": "yarn run build:staging && next start",
-    "start:prod": "yarn run build:prod && next start"
+    "start:dev": "yarn run build:dev && next start -p $PORT",
+    "start:staging": "yarn run build:staging && next start -p $PORT",
+    "start:prod": "yarn run build:prod && next start -p $PORT"
   },
   "dependencies": {
     "bootstrap": "^4.5.0",
